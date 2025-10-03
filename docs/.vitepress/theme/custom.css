@@ -1,0 +1,60 @@
+:root {
+    --vp-c-brand-1: #39c;
+    --vp-c-gutter: rgba(0, 0, 0, .1);
+}
+:root.dark {
+    --vp-c-brand-1: #9ce;
+    --vp-c-gutter: rgba(255, 255, 255, .1);
+}
+
+.VPDoc {
+    padding: 3rem 3rem 6rem !important;
+}
+
+.vp-doc p {
+    font-size: 24px;
+    line-height: 1.2;
+}
+.VPSidebarItem {
+    margin-bottom: .5rem
+}
+.VPLink .text {
+    line-height: 1.2;
+}
+
+.pager .pager-link {
+    padding: 0;
+    border: 0;
+    margin: 0 0 1rem;
+}
+
+.title-post {
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+}
+
+.list-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    gap: .5rem 1rem;
+    opacity: .5;
+    font-size: 12px;
+    li::before {
+        content: "#";
+        display: inline;
+        margin-right: 2px;
+    }
+}
+
+@media (min-width: 768px) {
+    .title-post {
+        font-size: 60px;
+    }
+    .vp-doc p {
+        font-size: 36px;
+    }
+}
