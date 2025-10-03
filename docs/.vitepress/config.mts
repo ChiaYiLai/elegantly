@@ -15,7 +15,6 @@ function getPostSidebar() {
       const { data } = matter(content)   // 解析 frontmatter
 
       const name = file.replace(/\.md$/, '')
-      console.log(name)
       return {
         text: data.title || name,   // 有 title 就用 title
         link: `/posts/${name}`
