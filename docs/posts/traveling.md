@@ -6,3 +6,5 @@ tags: ['過程', '幸福']
 Happiness is not a state to arrive at but, rather, a manner of traveling.
 
 幸福不是終點，而是旅程。
+
+– Samuel Johnson
