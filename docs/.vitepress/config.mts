@@ -31,7 +31,6 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.svg' }]
   ],
   themeConfig: {
-    logo: '/favicon.svg',
     nav: [
       { text: 'Chia Yi Lai', link: 'https://chiayilai.github.io/resume/' },
     ],

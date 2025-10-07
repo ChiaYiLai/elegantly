@@ -1,6 +1,7 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
+import Logo from './components/Logo.vue'
 
 const { Layout } = DefaultTheme
 const { frontmatter } = useData() 
@@ -8,6 +9,9 @@ const { frontmatter } = useData()
 
 <template>
   <Layout>
+    <template #nav-bar-title-before>
+      <Logo />
+    </template>
     <template #doc-before>
       <h1 class="title-post">{{ frontmatter.title }}</h1>
     </template>
