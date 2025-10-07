@@ -3,6 +3,8 @@ import matter from 'gray-matter'
 import fs from 'fs'
 import path from 'path'
 
+const base = '/elegantly/'
+
 function getPostSidebar() {
   const postsDir = path.resolve(__dirname, '../posts')
   const files = fs.readdirSync(postsDir)
@@ -23,12 +25,12 @@ function getPostSidebar() {
 }
 
 export default defineConfig({
-  base: '/elegantly/',
+  base,
   cleanUrls: true,
   title: "優雅地生活",
   description: "只有在感謝的時候，<br>你才擁有它們。",
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg' }]
+    ['link', { rel: 'icon', href: `${base}favicon.svg` }]
   ],
   themeConfig: {
     nav: [
