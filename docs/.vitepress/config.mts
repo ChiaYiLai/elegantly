@@ -24,6 +24,7 @@ function getPostSidebar() {
 
 export default defineConfig({
   base: '/elegantly/',
+  cleanUrls: true,
   title: "優雅地生活",
   description: "只有在感謝的時候，<br>你才擁有它們。",
   head: [
