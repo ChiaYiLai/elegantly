@@ -30,8 +30,21 @@ export default defineConfig({
   title: "優雅地生活",
   description: "只有在感謝的時候，<br>你才擁有它們。",
   head: [
-    ['link', { rel: 'icon', href: `${base}favicon.svg` }]
+    ['link', { rel: 'icon', href: `${base}favicon.svg` }],
+    ['script', { 
+      async: true, 
+      src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J' 
+    }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-K84RT52S7J');
+    `]
   ],
+  sitemap: {
+    hostname: `https://chiayilai.github.io${base}`
+  },
   themeConfig: {
     nav: [
       { text: 'Chia Yi Lai', link: 'https://chiayilai.github.io/resume/' },
