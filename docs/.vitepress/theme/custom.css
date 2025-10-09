@@ -1,29 +1,51 @@
 :root {
     --vp-c-brand-1: #39c;
     --vp-c-gutter: rgba(0, 0, 0, .1);
+    --vp-button-brand-bg: #39c;
 }
 :root.dark {
     --vp-c-brand-1: #9ce;
     --vp-c-gutter: rgba(255, 255, 255, .1);
+    --vp-button-brand-bg: #23c;
+}
+#app .name {
+    background: -webkit-linear-gradient(42deg, var(--vp-c-brand-1) 25%, #23c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 42px;
+    line-height: 1.3;
+    max-width: none;
 }
 
 .VPNavBarTitle a {
     color: var(--vp-c-brand-1) !important;
 }
+.VPButton.medium {
+    padding: 0 32px !important;
+}
 
 .VPDoc {
-    padding: 3rem 3rem 6rem !important;
+    padding: 0 3rem 6rem !important;
 }
 
 .vp-doc p {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
 }
 .VPSidebarItem {
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    h2 {
+        margin: 1rem 0;
+    }
 }
 .VPLink .text {
     line-height: 1.2;
+}
+
+.prev-next {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
 }
 
 .pager .pager-link {
@@ -33,9 +55,10 @@
 }
 
 .title-post {
-    font-size: 48px;
+    font-size: 32px;
     line-height: 1.1;
     margin-bottom: 3rem;
+    padding-top: 3rem;
 }
 
 .list-tags {
@@ -54,11 +77,19 @@
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
     .title-post {
         font-size: 60px;
     }
     .vp-doc p {
         font-size: 36px;
     }
+    #app .name {
+        font-size: 72px;
+        line-height: 1.1;
+    }
+}
+
+.VPLocalNavOutlineDropdown {
+    display: none;
 }

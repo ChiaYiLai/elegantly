@@ -1,32 +1,12 @@
 import { defineConfig } from 'vitepress'
-import matter from 'gray-matter'
-import fs from 'fs'
-import path from 'path'
-
+import { getPostSidebar } from './utils/posts'
 const base = '/elegantly/'
 
-function getPostSidebar() {
-  const postsDir = path.resolve(__dirname, '../posts')
-  const files = fs.readdirSync(postsDir)
-
-  return files
-    .filter(file => file.endsWith('.md'))
-    .map(file => {
-      const filePath = path.join(postsDir, file)
-      const content = fs.readFileSync(filePath, 'utf-8')
-      const { data } = matter(content)   // 解析 frontmatter
-
-      const name = file.replace(/\.md$/, '')
-      return {
-        text: data.title || name,   // 有 title 就用 title
-        link: `/posts/${name}`
-      }
-    })
-}
 
 export default defineConfig({
   base,
   cleanUrls: true,
+  lang: 'zh-TW',
   title: "優雅地生活",
   description: "只有在感謝的時候，<br>你才擁有它們。",
   head: [
@@ -47,7 +27,7 @@ export default defineConfig({
   },
   themeConfig: {
     nav: [
-      { text: 'Chia Yi Lai', link: 'https://chiayilai.github.io/resume/' },
+      { text: '關於作者', link: 'https://chiayilai.github.io/resume/' },
     ],
 
     sidebar: [
@@ -61,12 +41,25 @@ export default defineConfig({
     ],
 
     footer: {
-      copyright: '© Chia Yi Lai. All rights reserved. '
+      copyright: '© Chia Yi Lai. All rights reserved.'
     },
     docFooter: {
       prev: 'Prev',
       next: 'Next'
     },
+    sidebarMenuLabel: '目錄',
+    returnToTopLabel: 'up',
+    darkModeSwitchLabel: '外觀',
+    lightModeSwitchTitle: '切換到淺色模式',
+    darkModeSwitchTitle: '切換到深色模式',
+    aside: false,
+    notFound: {
+      title: '找不到頁面',
+      quote: '頁面不存在',
+      linkLabel: '返回首頁',
+      linkText: '回到首頁',
+      code: '404'
+    }
   }
 })
 
