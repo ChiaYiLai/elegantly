@@ -10,6 +10,8 @@ export interface PostsData {
 }
 
 export default createContentLoader('posts/*.md', {
+  includeSrc: true,  // 包含原始 markdown 內容
+  render: true, 
   // 💡 在 Node.js 環境中執行計算邏輯
   transform(raw: ContentData[]): PostsData { 
     

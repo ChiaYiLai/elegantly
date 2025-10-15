@@ -2,12 +2,12 @@
 import { computed, watch, onMounted } from 'vue'
 import { useData } from 'vitepress'
 const { params, frontmatter } = useData()
-import { data as postsData } from '../../posts.data'
+import { data } from '../../posts.data'
 
 const currentTag = computed(() => {
   return decodeURIComponent(params.value.tag || '')
 })
-const allPosts = computed(() => postsData.posts || [])
+const allPosts = computed(() => data.posts || [])
 
 const filteredPosts = computed(() => {
   if (!currentTag.value) return []
