@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 import { getPostSidebar } from './utils/posts'
 const base = '/elegantly/'
 
-
 export default defineConfig({
   base,
   cleanUrls: true,
@@ -22,6 +21,16 @@ export default defineConfig({
       gtag('config', 'G-K84RT52S7J');
     `]
   ],
+  async transformPageData(pageData) {
+    if (pageData.params?.tag) {
+      const tag = decodeURIComponent(pageData.params.tag)
+      pageData.title = tag
+      pageData.frontmatter = {
+        ...pageData.frontmatter,
+        title: tag
+      }
+    }
+  },
   sitemap: {
     hostname: `https://chiayilai.github.io${base}`
   },
@@ -59,7 +68,7 @@ export default defineConfig({
       linkLabel: '返回首頁',
       linkText: '回到首頁',
       code: '404'
-    }
+    },
   }
 })
 

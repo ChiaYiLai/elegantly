@@ -18,7 +18,7 @@ const { frontmatter } = useData()
     <template #doc-footer-before>
       <ul class="list-tags">
         <li v-for="tag in frontmatter.tags || []" :key="tag">
-          <a :href="`/elegantly/tag?tag=${tag}`">{{ tag }}</a>
+          <a :href="`/elegantly/tags/${tag}`">{{ tag }}</a>
         </li>
       </ul>
     </template>

@@ -2,11 +2,13 @@
     --vp-c-brand-1: #39c;
     --vp-c-gutter: rgba(0, 0, 0, .1);
     --vp-button-brand-bg: #39c;
+    --text: rgba(0, 0, 0, .7); 
 }
 :root.dark {
     --vp-c-brand-1: #9ce;
     --vp-c-gutter: rgba(255, 255, 255, .1);
     --vp-button-brand-bg: #23c;
+    --text: rgba(255, 255, 255, .7);
 }
 #app .name {
     background: -webkit-linear-gradient(42deg, var(--vp-c-brand-1) 25%, #23c);
@@ -29,9 +31,31 @@
     padding: 0 3rem 6rem !important;
 }
 
-.vp-doc p {
-    font-size: 22px;
-    line-height: 1.2;
+.vp-doc {
+    p {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    blockquote {
+        max-width: 520px;
+        margin-top: 3rem;
+        p {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        cite {
+            display: block;
+            font-style: normal;
+            margin-top: 1rem;
+            font-size: 14px;
+            opacity: .8;
+        }
+        cite::before {
+            content: "-";
+            display: inline;
+            margin-right: .5rem;
+        }
+    }
 }
 .VPSidebarItem {
     margin-bottom: .5rem;
@@ -67,6 +91,8 @@
 
 .list-posts {
     font-size: 24px;
+    list-style: none !important;
+    padding: 0 !important;
     li {
         margin-bottom: 2rem !important;
         a {
@@ -74,7 +100,8 @@
             text-underline-offset: 8px;
             text-decoration-thickness: 1px;
             text-decoration-color: var(--vp-c-gutter);
-            transition: .4s;
+            transition: 1s;
+            color: var(--text);
         }
         a:hover {
             color: var(--vp-c-brand-1);
