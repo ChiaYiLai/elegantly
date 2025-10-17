@@ -44,8 +44,22 @@
     .title-post {
         font-size: 48px;
         line-height: 1.1;
-        margin-bottom: 3rem;
-        padding-top: 3rem;
+        margin: 0;
+        padding: 3rem 0 0;
+    }
+    .title-post::after {
+        content: "";
+        display: block;
+        margin: 2rem 0;
+        width: 60px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: var(--vp-c-brand-1);
+        opacity: .75;
+    }
+    .prev-next {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
     }
 }
 
@@ -94,11 +108,6 @@
 }
 .VPLink .text {
     line-height: 1.2;
-}
-
-.prev-next {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
 }
 
 .pager .pager-link {
@@ -154,15 +163,17 @@
 }
 
 @media (min-width: 960px) {
-    .title-post {
-        font-size: 60px;
-    }
-    .vp-doc p {
-        font-size: 36px;
-    }
-    #app .name {
-        font-size: 72px;
-        line-height: 1.1;
+    #app {
+        .name {
+            font-size: 72px;
+            line-height: 1.1;
+        }
+        .title-post {
+            font-size: 60px;
+        }
+        .vp-doc p {
+            font-size: 30px;
+        }
     }
 }
 
