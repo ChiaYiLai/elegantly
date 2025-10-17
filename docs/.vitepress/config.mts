@@ -11,7 +11,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg` }],
     ['script', { 
-      async: true, 
+      async: 'true', 
       src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J' 
     }],
     ['script', {}, `

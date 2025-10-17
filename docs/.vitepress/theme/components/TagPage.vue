@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { computed, watch, onMounted } from 'vue'
+import { computed } from 'vue'
 import { withBase, useData } from 'vitepress'
-const { params, frontmatter } = useData()
-import { data } from '../../posts.data'
+const { params } = useData()
+import { data as posts } from '../../posts.data'
 
 const currentTag = computed(() => {
   return decodeURIComponent(params.value.tag || '')
 })
-const allPosts = computed(() => data.posts || [])
 
 const filteredPosts = computed(() => {
   if (!currentTag.value) return []
 
-  return allPosts.value
+  return posts
     .filter(p => {
       const tags: string[] = p.frontmatter.tags || []
       return tags.some(t => t.trim() === currentTag.value)
@@ -34,6 +33,3 @@ const filteredPosts = computed(() => {
     </p>
   </div>
 </template>
-
-<style scoped>
-</style>
