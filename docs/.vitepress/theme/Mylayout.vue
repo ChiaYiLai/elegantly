@@ -1,6 +1,6 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
-import { useData } from 'vitepress'
+import { withBase, useData } from 'vitepress'
 import Logo from './components/Logo.vue'
 
 const { Layout } = DefaultTheme
@@ -18,7 +18,7 @@ const { frontmatter } = useData()
     <template #doc-footer-before>
       <ul class="list-tags">
         <li v-for="tag in frontmatter.tags || []" :key="tag">
-          <a :href="`/elegantly/tags/${tag}`">{{ tag }}</a>
+          <a :href="withBase(`/tags/${tag}`)">{{ tag }}</a>
         </li>
       </ul>
     </template>

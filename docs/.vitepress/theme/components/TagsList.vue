@@ -6,8 +6,8 @@ const tags = data.allTags
 <template>
   <div>
     <ul class="list-tags">
-      <li v-for="tag in tags" :key="tag">
-        <a :href="`tags/${encodeURIComponent(tag)}`">{{ tag }}</a>
+      <li v-for="tag in tags" :key="tag.name">
+        <a :href="`tags/${encodeURIComponent(tag.name)}`">{{ tag.name }}({{ tag.count }})</a>
       </li>
     </ul>
   </div>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, watch, onMounted } from 'vue'
-import { useData } from 'vitepress'
+import { withBase, useData } from 'vitepress'
 const { params, frontmatter } = useData()
 import { data } from '../../posts.data'
 
@@ -24,7 +24,7 @@ const filteredPosts = computed(() => {
   <div class="tag-page">
     <ul class="list-posts" v-if="filteredPosts.length">
       <li v-for="post in filteredPosts" :key="post.url">
-        <a :href="`/elegantly${post.url}`">
+        <a :href="withBase(post.url)">
           {{ post.frontmatter.title || '無標題' }}
         </a>
       </li>
