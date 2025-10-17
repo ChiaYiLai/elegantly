@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { withBase } from 'vitepress'
+import { withBase, type ContentData } from 'vitepress'
 import { data } from '../../posts.data'
+const randomPost = ref<ContentData | null>(null)
 
-const randomPost = ref(null)
 
-// 只在客戶端執行隨機邏輯，避免 SSR/CSR 不一致
-onMounted(() => {
+onMounted(async () => {
   const posts = data.posts || []
   if (posts.length > 0) {
     const randomIndex = Math.floor(Math.random() * posts.length)

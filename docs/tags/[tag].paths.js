@@ -1,11 +1,8 @@
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
 import matter from 'gray-matter'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-const POSTS_DIR = path.resolve(__dirname, '../posts')
+const POSTS_DIR = path.resolve(import.meta.dirname, '../posts')
 
 function getAllTagsSync() {
   if (!fs.existsSync(POSTS_DIR)) {

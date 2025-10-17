@@ -1,9 +1,6 @@
 import matter from 'gray-matter'
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export interface PostItem {
   text: string
@@ -11,21 +8,15 @@ export interface PostItem {
 }
 
 export function getPostSidebar(): PostItem[] {
-  const postsDir = path.resolve(__dirname, '../../posts')
-  
-  if (!fs.existsSync(postsDir)) {
-    return []
-  }
-  
+  const postsDir = path.resolve(import.meta.dirname, '../../posts')
+  if (!fs.existsSync(postsDir)) return []
   const files = fs.readdirSync(postsDir)
-
   return files
     .filter(file => file.endsWith('.md'))
     .map(file => {
       const filePath = path.join(postsDir, file)
       const content = fs.readFileSync(filePath, 'utf-8')
       const { data } = matter(content)
-
       const name = file.replace(/\.md$/, '')
       return {
         text: data.title || name,
