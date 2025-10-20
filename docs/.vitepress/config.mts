@@ -7,7 +7,7 @@ export default defineConfig({
   cleanUrls: true,
   lang: 'zh-TW',
   title: "優雅地生活",
-  description: "只有在感謝的時候，<br>你才擁有它們。",
+  description: "對生活的觀察，對生命的意識，對人的理解。",
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg` }],
     ['script', { 
@@ -38,17 +38,14 @@ export default defineConfig({
     nav: [
       { text: '關於作者', link: 'https://chiayilai.github.io/resume/' },
     ],
-
     sidebar: [
       {
         text: '目錄',
         items: getPostSidebar()
       }
     ],
-
     socialLinks: [
     ],
-
     footer: {
       copyright: '© Chia Yi Lai. All rights reserved.'
     },
@@ -71,8 +68,3 @@ export default defineConfig({
     },
   }
 })
-
-export interface Footer {
-  message?: string
-  copyright?: string
-}
