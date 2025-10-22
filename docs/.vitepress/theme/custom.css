@@ -75,9 +75,20 @@
 }
 
 .vp-doc {
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 24px;
+    }
     p {
         font-size: 22px;
         line-height: 1.2;
+    }
+    ul, ol {
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 3rem;
     }
     blockquote {
         max-width: 520px;
@@ -171,8 +182,23 @@
         .title-post {
             font-size: 60px;
         }
-        .vp-doc p {
-            font-size: 30px;
+        .vp-doc {
+            h2 {
+                font-size: 36px;
+            }
+            h3 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 30px;
+                margin-bottom: 3rem;
+            }
+            ul, ol {
+                font-size: 24px;
+                li {
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
 }
