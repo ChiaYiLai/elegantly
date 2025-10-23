@@ -1,5 +1,5 @@
 ---
-title: EXERTION
+title: EXERTION.
 description: 因為很可貴，才需要努力
 tags: ['努力', '智慧', '純潔', '無知', '縱欲', '懶惰']
 ---
