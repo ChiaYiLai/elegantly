@@ -10,3 +10,9 @@ tags: ['照顧', '悅己']
 不愛惜自己的人，也很難得到別人的愛。
 
 自己才是世界上最需要自己照顧的人，只有照顧好自己，才有立場去照顧別人。
+
+<blockquote>
+<p>When we strive to become better than we are, everything around us becomes better too.</p>
+<p>當我們努力讓自己變得更好時，我們周圍的一切也會變得更好。</p>
+<cite>牧羊少年奇幻之旅</cite>
+</blockquote>

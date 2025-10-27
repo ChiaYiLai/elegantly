@@ -8,3 +8,9 @@ tags: ['了解', '智慧']
 了解自己目前的情緒，找到快樂或不快樂的原因。
 
 了解自己所能與所不能，接受它、改進它。
+
+<blockquote>
+<p>Knowing yourself is the beginning of all wisdom.</p>
+<p>了解自己是所有智慧的開端。</p>
+<cite>Aristotle 亞里斯多德</cite>
+</blockquote>

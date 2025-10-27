@@ -8,6 +8,7 @@ tags: ['想像力', '美好', '恐懼']
 悲觀的人，只是把想像力用錯方式而已。練習讓想像力聽我們的話。
 
 <blockquote>
-<p>We are more often frightened than hurt; and we suffer more from imagination than from reality.<br>我們更常害怕而非真的受傷，我們痛苦來自想像而非現實。</p>
+<p>We are more often frightened than hurt; and we suffer more from imagination than from reality.</p>
+<p>我們更常害怕而非真的受傷，我們痛苦來自想像而非現實。</p>
 <cite>Lucius Annaeus Seneca 塞內卡</cite>
 </blockquote>
