@@ -10,6 +10,8 @@ export default defineConfig({
   description: "對生活的觀察，對生命的意識，對人的理解。",
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg` }],
+    ['meta', { name: "theme-color", media: "(prefers-color-scheme: light)", content: "#ffffff" }],
+    ['meta', { name: "theme-color", media: "(prefers-color-scheme: dark)", content: "#1b1b1f" }],
     ['script', { 
       async: 'true', 
       src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J' 
