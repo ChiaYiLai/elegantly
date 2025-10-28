@@ -10,6 +10,7 @@ export default defineConfig({
   description: "對生活的觀察，對生命的意識，對人的理解。",
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg` }],
+    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['script', { 
       async: 'true', 
       src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J' 
