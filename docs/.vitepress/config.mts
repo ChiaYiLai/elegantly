@@ -11,7 +11,7 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg` }],
     ['link', { rel: 'apple-touch-icon', href: `${base}icon-512.png` }],
-    ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
+    ['link', { rel: 'manifest', href: `${base}manifest.webmanifest` }],
     ['script', { 
       async: 'true', 
       src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J' 
