@@ -11,6 +11,6 @@ export default {
   enhanceApp({ app }) {
     app.component('TagPage', TagPage)
     app.component('TagsList', TagsList)
-    app.component('RandomPost', RandomPost) 
+    app.component('RandomPost', RandomPost)
   }
 }
