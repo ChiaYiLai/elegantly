@@ -9,9 +9,13 @@ const { frontmatter, isDark } = useData()
 
 watchEffect(() => {
   const color = isDark.value ? '#1b1b1f' : '#ffffff'
-  document
-    .querySelector('meta[name="theme-color"]')
-    ?.setAttribute('content', color)
+  let meta = document.querySelector('meta[name="theme-color"]')
+  if (!meta) {
+    meta = document.createElement('meta')
+    meta.setAttribute('name', 'theme-color')
+    document.head.appendChild(meta)
+  }
+  meta.setAttribute('content', color)
 })
 </script>
 
