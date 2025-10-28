@@ -1,6 +1,5 @@
 {
   "name": "優雅地生活",
-  "short_name": "LIFE",
   "icons": [
     {
       "src": "/elegantly/app-icon.png",
@@ -11,6 +10,5 @@
   "theme_color": "#1b1b1f",
   "background_color": "#3399cc",
   "display": "standalone",
-  "start_url": "/elegantly/",
-  "scope": "/elegantly/"
+  "start_url": "/elegantly/"
 }
