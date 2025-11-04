@@ -1,5 +1,5 @@
 ---
-title: The 90/10 principle
+title: The 90/10 principle.
 description: 不必對任何事都有反應
 tags: ['反應', '單純']
 ---
