@@ -45,7 +45,6 @@
         font-size: 28px;
         line-height: 1.1;
         margin: 0;
-        padding: 3rem 0 0;
     }
     .title-post::after {
         content: "";
@@ -68,10 +67,6 @@
 }
 .VPButton.medium {
     padding: 0 32px !important;
-}
-
-.VPDoc {
-    padding: 0 3rem 6rem !important;
 }
 
 .vp-doc {

@@ -1,6 +1,6 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
-import { withBase, useData } from 'vitepress'
+import { withBase, useData, inBrowser } from 'vitepress'
 import { watchEffect } from 'vue'
 import Logo from './components/Logo.vue'
 
@@ -8,14 +8,16 @@ const { Layout } = DefaultTheme
 const { frontmatter, isDark } = useData()
 
 watchEffect(() => {
-  const color = isDark.value ? '#1b1b1f' : '#ffffff'
-  let meta = document.querySelector('meta[name="theme-color"]')
-  if (!meta) {
-    meta = document.createElement('meta')
-    meta.setAttribute('name', 'theme-color')
-    document.head.appendChild(meta)
+  if (inBrowser) {
+    const color = isDark.value ? '#1b1b1f' : '#ffffff'
+    let meta = document.querySelector('meta[name="theme-color"]')
+    if (!meta) {
+      meta = document.createElement('meta')
+      meta.setAttribute('name', 'theme-color')
+      document.head.appendChild(meta)
+    }
+    meta.setAttribute('content', color)
   }
-  meta.setAttribute('content', color)
 })
 </script>
 
