@@ -1,30 +1,38 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { withBase, type ContentData } from 'vitepress'
+import { ref, watch } from 'vue'
+import { withBase, type ContentData, useRoute } from 'vitepress'
 import { data as posts } from '../../posts.data'
-const randomPost = ref<ContentData | null>(null)
+const randomPosts = ref<ContentData[] | null>(null)
 
-onMounted(async () => {
+const route = useRoute()
+function fetchRandomPosts() {
   if (posts.length) {
-    const randomIndex = Math.floor(Math.random() * posts.length)
-    randomPost.value = posts[randomIndex]
+    const selectedCount = 3
+    randomPosts.value = [...posts]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, selectedCount)
   }
-})
+}
+fetchRandomPosts() 
+
+watch(
+  () => route.path,
+  () => {
+    fetchRandomPosts()
+  }
+)
 </script>
 
 <template>
-  <div v-if="randomPost" class="random-post">
-    <div class="post-card">
-      <a :href="withBase(randomPost.url)">
-        <h3 class="title-post">{{ randomPost.frontmatter.title || '無標題' }}</h3>
-        <div v-if="randomPost.html" class="content" v-html="randomPost.html"></div>
-      </a>
-    </div>
-  </div>
-  <!-- 可選：SSR 時顯示佔位內容 -->
-  <div v-else class="random-post skeleton">
-    <div class="post-card">
-      <div class="loading">載入中...</div>
-    </div>
+  <div v-if="randomPosts" class="random-post">
+    <h2>隨機文章</h2>
+    <ul class="list-cards">
+      <li class="post-card" v-for="post in randomPosts">
+        <a :href="withBase(post.url)">
+          <h3>{{ post.frontmatter.title || '無標題' }}</h3>
+          <div v-if="post.html" class="content" v-html="post.html"></div>
+        </a>
+      </li>
+    </ul>
   </div>
 </template>

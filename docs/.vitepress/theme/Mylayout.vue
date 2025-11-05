@@ -36,5 +36,8 @@ watchEffect(() => {
         </li>
       </ul>
     </template>
+    <template #doc-after>
+      <RandomPost />
+    </template>
   </Layout>
 </template>

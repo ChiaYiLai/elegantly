@@ -3,4 +3,10 @@ title: 行動代替抱怨。
 description: 這樣才能越來越好，久而久之，抱怨就會越來越少發生。
 tags: ['行動', '抱怨', '意識', '察覺']
 ---
-當我們開始抱怨時，就要意識到某件事不合我們的意，要同時想到自己可以怎麼做，讓自己的抱怨不再產生。
+當我們開始抱怨時，就要意識到某件事不合我們的意，要同時想到自己可以怎麼做，讓相同的抱怨不再產生。
+
+<blockquote>
+<p>Complaining is silly. Either act or forget.</p>
+<p>抱怨是愚蠢的。行動或忘掉。</p>
+<cite>Stefan Sagmeister 施德明</cite>
+</blockquote>
