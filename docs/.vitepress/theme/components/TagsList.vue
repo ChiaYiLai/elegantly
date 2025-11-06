@@ -2,7 +2,10 @@
 import { computed } from 'vue'
 import { data as posts } from '../../posts.data'
 
-interface TagInfo { name: string; count: number }
+interface TagInfo {
+  name: string
+  count: number
+}
 
 const allTags = computed<TagInfo[]>(() => {
   const map = new Map<string, number>()
@@ -19,11 +22,12 @@ const allTags = computed<TagInfo[]>(() => {
 </script>
 
 <template>
-  <div>
-    <ul class="list-tags">
-      <li v-for="tag in allTags" :key="tag.name">
-        <a :href="`tags/${encodeURIComponent(tag.name)}`">{{ tag.name }}({{ tag.count }})</a>
-      </li>
-    </ul>
-  </div>
+  <ul class="list-tags">
+    <li v-for="tag in allTags" :key="tag.name">
+      <a :href="`tags/${encodeURIComponent(tag.name)}`">
+        <b>{{ tag.name }}</b>
+        <span>{{ tag.count }}</span>
+      </a>
+    </li>
+  </ul>
 </template>

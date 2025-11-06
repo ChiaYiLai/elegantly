@@ -8,12 +8,10 @@ const route = useRoute()
 function fetchRandomPosts() {
   if (posts.length) {
     const selectedCount = 3
-    randomPosts.value = [...posts]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, selectedCount)
+    randomPosts.value = [...posts].sort(() => Math.random() - 0.5).slice(0, selectedCount)
   }
 }
-fetchRandomPosts() 
+fetchRandomPosts()
 
 watch(
   () => route.path,
@@ -27,7 +25,7 @@ watch(
   <div v-if="randomPosts" class="random-post">
     <h2>隨機文章</h2>
     <ul class="list-cards">
-      <li class="post-card" v-for="post in randomPosts">
+      <li v-for="post in randomPosts">
         <a :href="withBase(post.url)">
           <h3>{{ post.frontmatter.title || '無標題' }}</h3>
           <div v-if="post.html" class="content" v-html="post.html"></div>
@@ -36,3 +34,5 @@ watch(
     </ul>
   </div>
 </template>
+
+<style></style>

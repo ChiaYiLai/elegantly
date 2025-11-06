@@ -1,237 +1,155 @@
 :root {
-    --vp-c-brand-1: #39c;
-    --vp-c-gutter: rgba(0, 0, 0, .1);
-    --vp-button-brand-bg: #39c;
-    --text: rgba(0, 0, 0, .7);
-    --bg: rgba(0, 0, 0, .05);
-    --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(42deg, var(--vp-c-brand-1) 25%, #23c);
+  --vp-c-brand-1: #39c;
+  --vp-c-gutter: rgba(0, 0, 0, 0.1);
+  --vp-button-brand-bg: #39c;
+  --text: rgba(0, 0, 0, 0.7);
+  --bg: rgba(0, 0, 0, 0.05);
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(42deg, var(--vp-c-brand-1) 25%, #23c);
 }
 :root.dark {
-    --vp-c-brand-1: #9ce;
-    --vp-c-gutter: rgba(255, 255, 255, .1);
-    --vp-c-bg-soft: #111;
-    --vp-button-brand-bg: #23c;
-    --text: rgba(255, 255, 255, .7);
-    --bg: rgba(0, 0, 0, .2);
+  --vp-c-brand-1: #9ce;
+  --vp-c-gutter: rgba(255, 255, 255, 0.1);
+  --vp-c-bg-soft: #161618;
+  --vp-button-brand-bg: #23c;
+  --text: rgba(255, 255, 255, 0.7);
+  --bg: rgba(0, 0, 0, 0.2);
 }
 .VPHomeHero {
-    background-color: var(--vp-c-bg-soft);
-    margin-bottom: 2rem;
+  background-color: var(--vp-c-bg-soft);
+  margin-bottom: 2rem;
 }
-.list-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    li {
-        width: 100%;
-        background-color: var(--vp-c-bg-soft);
-        border-radius: 12px;
-        a {
-            display: block;
-            text-decoration: none;
-            color: var(--text);
-            padding: 2rem;
-        }
-        a:hover {
-            color: var(-vp-c-brand-1) !important;
-        }
-        h3 {
-            margin: 0 0 2rem;
-            font-size: 24px;
-            line-height: 1.2;
-        }
-        .content {
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
-        }
-        p {
-            font-size: 18px;
-        }
-    }
+.name {
+  max-width: none !important;
 }
-#app {
-    .name {
-        max-width: none;
-    }
-    .VPFeature {
-        background-color: var(--vp-c-bg-soft);
-    }
-    .random-post {
-        margin-top: 6rem;
-        h2 {
-            font-size: 21px !important;
-            margin: 0 0 1rem .5rem;
-        }
-    }
-    .title-post {
-        font-size: 28px;
-        line-height: 1.1;
-        margin: 0;
-    }
-    .title-post::after {
-        content: "";
-        display: block;
-        margin: 2rem 0;
-        width: 60px;
-        height: 3px;
-        border-radius: 2px;
-        background-color: var(--vp-c-brand-1);
-        opacity: .75;
-    }
-    .prev-next {
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2rem;
-    }
+.VPFeature {
+  background-color: var(--vp-c-bg-soft);
+}
+.title-post {
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0;
+}
+.title-post::after {
+  content: '';
+  display: block;
+  margin: 2rem 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--vp-c-brand-1);
+  opacity: 0.75;
+}
+.prev-next {
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }
 
 .VPNavBarTitle a {
-    color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
 }
 .VPButton.medium {
-    padding: 0 32px !important;
+  padding: 0 32px !important;
 }
 
 .vp-doc {
-    h2 {
-        font-size: 28px;
-    }
-    h3 {
-        font-size: 24px;
-    }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  ul,
+  ol {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 3rem;
+  }
+  blockquote {
+    max-width: 520px;
+    margin-top: 3rem;
     p {
-        font-size: 18px;
-        line-height: 1.2;
+      font-size: 16px;
+      line-height: 1.4;
+      margin-bottom: 1rem;
     }
-    ul, ol {
-        font-size: 18px;
-        line-height: 1.4;
-        margin-bottom: 3rem;
+    cite {
+      display: block;
+      font-style: normal;
+      margin-top: 2rem;
+      font-size: 14px;
+      opacity: 0.8;
     }
-    blockquote {
-        max-width: 520px;
-        margin-top: 3rem;
-        p {
-            font-size: 18px;
-            line-height: 1.4;
-            margin-bottom: 1rem;
-        }
-        cite {
-            display: block;
-            font-style: normal;
-            margin-top: 2rem;
-            font-size: 14px;
-            opacity: .8;
-        }
-        cite::before {
-            content: "-";
-            display: inline;
-            margin-right: .5rem;
-        }
+    cite::before {
+      content: '-';
+      display: inline;
+      margin-right: 0.5rem;
     }
+  }
 }
 .VPSidebarItem {
-    margin-bottom: .5rem;
-    h2 {
-        margin: 1rem 0;
-    }
+  margin-bottom: 0.5rem;
+  h2 {
+    margin: 1rem 0;
+  }
 }
 .VPLink .text {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 .pager .pager-link {
-    padding: 0;
-    border: 0;
-    margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+  margin: 0 0 1rem;
 }
 
 .VPPage {
-    padding: 0 3rem 3rem;
+  padding: 0 3rem 3rem;
 }
-
-.list-posts {
-    font-size: 24px;
-    list-style: none !important;
-    padding: 0 !important;
-    li {
-        margin-bottom: 2rem !important;
-        a {
-            text-decoration: underline;
-            text-underline-offset: 8px;
-            text-decoration-thickness: 1px;
-            text-decoration-color: var(--vp-c-gutter);
-            transition: 1s;
-            color: var(--text);
-        }
-        a:hover {
-            color: var(--vp-c-brand-1);
-        }
-    }
-}
-
-#app .list-tags {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0 0 1.5rem;
-    gap: .5rem 1rem;
-    opacity: .5;
-    font-size: 16px;
-    li {
-        margin: 0;
-    }
-    li::before {
-        content: "#";
-        display: inline;
-        margin-right: 2px;
-    }
-    a {
-        text-decoration: none;
-    }
+.random-post {
+  margin-top: 6rem;
+  h2 {
+    font-size: 21px !important;
+    margin: 0 0 1rem 0.5rem;
+  }
 }
 
 @media (min-width: 960px) {
-    .list-cards {
-        li {
-            width: calc(100% / 3);
-            flex: 1;
-        }
+  .title-post {
+    font-size: 60px !important;
+    font-weight: normal !important;
+    line-height: 1.2 !important;
+  }
+  .vp-doc {
+    h2 {
+      font-size: 36px;
     }
-    #app {
-        .title-post {
-            font-size: 60px;
-        }
-        .vp-doc {
-            h2 {
-                font-size: 36px;
-            }
-            h3 {
-                font-size: 32px;
-            }
-            p {
-                font-size: 30px;
-                margin-bottom: 3rem;
-            }
-            ul, ol {
-                font-size: 24px;
-                li {
-                    margin-bottom: 1rem;
-                }
-            }
-            blockquote {
-                p {
-                    font-size: 18px;
-                    margin-bottom: .5rem;
-                }
-            }
-        }
+    h3 {
+      font-size: 32px;
     }
+    p {
+      font-size: 30px;
+      margin-bottom: 2rem;
+    }
+    ul,
+    ol {
+      font-size: 24px;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+    blockquote {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
 }
 
 .VPLocalNavOutlineDropdown {
-    display: none;
+  display: none;
 }

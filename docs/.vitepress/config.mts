@@ -38,6 +38,8 @@ export default defineConfig({
   },
   themeConfig: {
     nav: [
+      { text: '目錄', link: `/posts/` },
+      { text: '標籤', link: `/tags/` },
       { text: '關於作者', link: 'https://chiayilai.github.io/resume/' },
     ],
     sidebar: [
@@ -56,7 +58,7 @@ export default defineConfig({
       next: 'Next'
     },
     sidebarMenuLabel: '目錄',
-    returnToTopLabel: 'up',
+    returnToTopLabel: '回到頂部',
     darkModeSwitchLabel: '外觀',
     lightModeSwitchTitle: '切換到淺色模式',
     darkModeSwitchTitle: '切換到深色模式',

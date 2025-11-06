@@ -13,6 +13,7 @@ export function getPostSidebar(): PostItem[] {
   const files = fs.readdirSync(postsDir)
   return files
     .filter(file => file.endsWith('.md'))
+    .filter(file => file !== 'index.md')
     .map(file => {
       const filePath = path.join(postsDir, file)
       const content = fs.readFileSync(filePath, 'utf-8')
