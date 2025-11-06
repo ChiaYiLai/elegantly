@@ -24,16 +24,11 @@ const props = withDefaults(defineProps<PostProps>(), {
 
 <style>
 .list-catalog {
-  font-size: 18px;
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
   li {
-    flex: 0 1 calc((100% - 1 * 1.5rem) / 2);
-    margin: 0 !important;
+    margin: 0 0 1rem;
     a {
       text-decoration: underline;
       text-underline-offset: 8px;
@@ -41,6 +36,10 @@ const props = withDefaults(defineProps<PostProps>(), {
       text-decoration-color: var(--vp-c-gutter);
       transition: 1s;
       color: var(--text);
+      h3 {
+        font-size: 18px;
+        margin: 0;
+      }
     }
     a:hover {
       color: var(--vp-c-brand-1);
@@ -48,10 +47,20 @@ const props = withDefaults(defineProps<PostProps>(), {
   }
 }
 @media (min-width: 960px) {
-  .list-posts {
+  .list-catalog {
     font-size: 21px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     li {
       flex: 0 1 calc((100% - 2 * 1.5rem) / 3);
+      margin: 0 !important;
+      a {
+        h3 {
+          font-size: 24px;
+          line-height: 1.5;
+        }
+      }
     }
   }
 }
@@ -73,10 +82,14 @@ const props = withDefaults(defineProps<PostProps>(), {
       background-color: var(--vp-c-bg-soft);
       border-radius: 12px;
       height: 100%;
+      transition: 0.4s;
+      a {
+        display: none;
+      }
     }
     a:hover {
       color: var(--text);
-      box-shadow: 0 0 0 1px var(--vp-c-gutter);
+      box-shadow: 0 0 0 1px var(--vp-c-brand-1);
     }
     h3 {
       margin: 0 0 1.5rem;

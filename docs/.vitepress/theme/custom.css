@@ -1,5 +1,6 @@
 :root {
   --vp-c-brand-1: #39c;
+  --vp-c-brand-2: #28b;
   --vp-c-gutter: rgba(0, 0, 0, 0.1);
   --vp-button-brand-bg: #39c;
   --text: rgba(0, 0, 0, 0.7);
@@ -9,6 +10,7 @@
 }
 :root.dark {
   --vp-c-brand-1: #9ce;
+  --vp-c-brand-2: #adf;
   --vp-c-gutter: rgba(255, 255, 255, 0.1);
   --vp-c-bg-soft: #161618;
   --vp-button-brand-bg: #23c;
@@ -59,9 +61,17 @@
   h3 {
     font-size: 24px;
   }
+  h4 {
+    margin-bottom: 2rem;
+  }
   p {
     font-size: 18px;
     line-height: 1.4;
+  }
+  a {
+    text-underline-offset: 8px;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--vp-c-gutter);
   }
   ul,
   ol {
@@ -131,6 +141,9 @@
     h3 {
       font-size: 32px;
     }
+    h4 {
+      font-size: 28px;
+    }
     p {
       font-size: 30px;
       margin-bottom: 2rem;
@@ -138,8 +151,13 @@
     ul,
     ol {
       font-size: 24px;
+      list-style: none;
+      padding: 0;
       li {
         margin-bottom: 1rem;
+      }
+      p {
+        font-size: 24px;
       }
     }
     blockquote {

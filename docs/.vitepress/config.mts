@@ -6,22 +6,30 @@ export default defineConfig({
   base,
   cleanUrls: true,
   lang: 'zh-TW',
-  title: "優雅地生活",
-  description: "對生活的觀察，對生命的意識，對人的理解。",
+  title: '優雅地生活',
+  description:
+    '《優雅地生活》是記錄：意識問題與解決方法，不斷改善自己的過程。每個人都是如此成長，記錄讓我們更清晰面對自己，它是心靈平靜的基石，與面對變動環境的依靠。對生活的觀察，對生命的意識，對人的理解。',
   head: [
     ['link', { rel: 'icon', href: `${base}favicon.svg` }],
     ['link', { rel: 'apple-touch-icon', href: `${base}app-icon.png` }],
     ['link', { rel: 'manifest', href: `${base}manifest.webmanifest` }],
-    ['script', { 
-      async: 'true', 
-      src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J' 
-    }],
-    ['script', {}, `
+    [
+      'script',
+      {
+        async: 'true',
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-K84RT52S7J',
+      },
+    ],
+    [
+      'script',
+      {},
+      `
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-K84RT52S7J');
-    `]
+    `,
+    ],
   ],
   async transformPageData(pageData) {
     if (pageData.params?.tag) {
@@ -29,33 +37,32 @@ export default defineConfig({
       pageData.title = tag
       pageData.frontmatter = {
         ...pageData.frontmatter,
-        title: tag
+        title: tag,
       }
     }
   },
   sitemap: {
-    hostname: `https://chiayilai.github.io${base}`
+    hostname: `https://chiayilai.github.io${base}`,
   },
   themeConfig: {
     nav: [
       { text: '目錄', link: `/posts/` },
       { text: '標籤', link: `/tags/` },
-      { text: '關於作者', link: 'https://chiayilai.github.io/resume/' },
+      { text: '作者', link: 'https://chiayilai.github.io/resume/' },
     ],
     sidebar: [
       {
         text: '目錄',
-        items: getPostSidebar()
-      }
+        items: getPostSidebar(),
+      },
     ],
-    socialLinks: [
-    ],
+    socialLinks: [],
     footer: {
-      copyright: '© Chia Yi Lai. All rights reserved.'
+      copyright: '© Chia Yi Lai. All rights reserved.',
     },
     docFooter: {
       prev: 'Prev',
-      next: 'Next'
+      next: 'Next',
     },
     sidebarMenuLabel: '目錄',
     returnToTopLabel: '回到頂部',
@@ -68,7 +75,7 @@ export default defineConfig({
       quote: '頁面不存在',
       linkLabel: '返回首頁',
       linkText: '回到首頁',
-      code: '404'
+      code: '404',
     },
-  }
+  },
 })
