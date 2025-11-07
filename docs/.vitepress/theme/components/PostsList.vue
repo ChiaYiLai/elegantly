@@ -51,9 +51,9 @@ const props = withDefaults(defineProps<PostProps>(), {
     font-size: 21px;
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2rem 4rem;
     li {
-      flex: 0 1 calc((100% - 2 * 1.5rem) / 3);
+      flex: 0 1 calc((100% - 2 * 4rem) / 3);
       margin: 0 !important;
       a {
         h3 {
